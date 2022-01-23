@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ page_name }}</h1>
+  {% for name in list_of_names %}
+  <ul>
+    <li>{{ name }}</li>
+  </ul>
+  {% endfor %}
+{% endblock content %}

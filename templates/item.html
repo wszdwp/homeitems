@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ page_name }}</h1>
+  <form method="POST" action="/item">
+      <input type="text" placeholder="category">
+      <input type="text" placeholder="location">
+      <input type="text" placeholder="item description">
+      <input type="text" placeholder="quantity">
+      <input type="submit">
+  </form>
+{% endblock content %}

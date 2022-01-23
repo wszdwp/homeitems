@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Welcome to Home Items Dashboard</h1>
+  {% for name in list_of_names %}
+  <ul>
+    <li><a href="{{ name.lower() }}">{{ name }}</a></li>
+  </ul>
+  {% endfor %}
+{% endblock content %}
