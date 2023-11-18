@@ -22,9 +22,23 @@ def item():
         print('----------')
         print(request.form)
         print('----------')
-        return redirect(url_for('item'))
+        return redirect(url_for('item',
+                                category=request.form['category'],
+                                location=request.form['location'],
+                                itemdescription=request.form['itemdescription'],
+                                quantity=request.form['quantity'],
+                                ))
     else:
-        return render_template('item.html', page_name='item')
+        print('----------')
+        print(request.args)
+        print('----------')
+        return render_template('item.html',
+                               page_name='item',
+                               category=request.args.get('category', ''),
+                               location=request.args.get('location', ''),
+                               itemdescription=request.args.get('itemdescription', ''),
+                               quantity=request.args.get('quantity', ''),
+                               )
 
 @app.route('/about')
 def about():

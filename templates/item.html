@@ -3,10 +3,17 @@
 {% block content %}
   <h1>{{ page_name }}</h1>
   <form method="POST" action="/item">
-      <input type="text" placeholder="category">
-      <input type="text" placeholder="location">
-      <input type="text" placeholder="item description">
-      <input type="text" placeholder="quantity">
+      <input name="category" type="text" placeholder="category">
+      <input name="location" type="text" placeholder="location">
+      <input name="itemdescription" type="text" placeholder="item description">
+      <input name="quantity" type="text" placeholder="quantity">
       <input type="submit">
   </form>
+
+  <ul>
+    <li>category: {{ category }} </li>
+    <li>location: {{ location }} </li>
+    <li>itemdescription: {{ itemdescription }} </li>
+    <li>quantity: {{ quantity }} </li>
+  </ul>
 {% endblock content %}
